@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC    -shared -Wl,-soname,libgtest_main.so -o libgtest_main.so CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -L/home/hefty/mobius_java/build/gtest/src -lpthread libgtest.so -lpthread -Wl,-rpath,/home/hefty/mobius_java/build/gtest/src:/home/hefty/mobius_java/build/gtest 

@@ -1,0 +1,2 @@
+android_core
+-DCATKIN_DEVEL_PREFIX=/home/student/android_new/devel -DCMAKE_INSTALL_PREFIX=/home/student/android_new/install

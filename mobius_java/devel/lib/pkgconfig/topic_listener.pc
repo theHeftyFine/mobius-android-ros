@@ -1,0 +1,8 @@
+prefix=/home/hefty/mobius_java/devel
+
+Name: topic_listener
+Description: Description of topic_listener
+Version: 0.1.0
+Cflags: 
+Libs: -L/home/hefty/mobius_java/devel/lib 
+Requires: 

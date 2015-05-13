@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "mobius_java_a")
+set(mobius_java_a_MAINTAINER "hefty <hefty@todo.todo>")
+set(mobius_java_a_DEPRECATED "")
+set(mobius_java_a_VERSION "0.1.0")
+set(mobius_java_a_BUILD_DEPENDS "rosjava_build_tools")
+set(mobius_java_a_RUN_DEPENDS )
+set(mobius_java_a_BUILDTOOL_DEPENDS "catkin")

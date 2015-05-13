@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "topic_listener")
+set(topic_listener_MAINTAINER "hefty <hefty@todo.todo>")
+set(topic_listener_DEPRECATED "")
+set(topic_listener_VERSION "0.1.0")
+set(topic_listener_BUILD_DEPENDS "rosjava_build_tools")
+set(topic_listener_RUN_DEPENDS )
+set(topic_listener_BUILDTOOL_DEPENDS "catkin")
