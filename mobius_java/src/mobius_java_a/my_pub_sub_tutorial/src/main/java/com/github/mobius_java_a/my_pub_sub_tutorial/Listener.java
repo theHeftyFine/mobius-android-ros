@@ -32,9 +32,11 @@ import java.util.List;
 import java.util.Collection;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.set;
+import java.util.Set;
 import java.lang.String;
-
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class Listener extends AbstractNodeMain {
 
@@ -64,16 +66,27 @@ public class Listener extends AbstractNodeMain {
 			systemState = masterClient.getSystemState(getDefaultNodeName());
 			topicSystemState = systemState.getResult().getTopics();
 			List<String> topicArray = new ArrayList<String>();
+			HashMap<String,List<Set<String>>> topicPubSub = new HashMap<String,List<Set<String>>>();
 			for (TopicSystemState i : topicSystemState) {
 				topicArray.add(i.getTopicName());
+				List<Set<String>> temp = new ArrayList<Set<String>>();
+				temp.add(i.getPublishers());
+				temp.add(i.getSubscribers());
+				topicPubSub.put(i.getTopicName(),temp);
 			}
-			out = Arrays.toString(topicArray.toArray());
-			if (out.startsWith("[")){
-				out = out.substring(1);
+			String out = "";
+			for (Map.Entry<String,List<Set<String>>> i : topicPubSub.entrySet()){
+				out = out + "Topic: " + i.getKey() + "\n";
+				List<Set<String>> temp = i.getValue();
+				out = out + "Publishers: \n";
+				for(String j : temp.get(0)){
+					out = out + j + "\n";
+				}
+				out = out + "Subscribers: \n";
+				for(String j : temp.get(1)){
+					out = out + j + "\n";
+				}
 			}
-			if (out.endsWith("]")){
-				out = out.substring(0,out.length()-1);
-			} 
 			log.info(out);
 			Thread.sleep(1000);
 			}

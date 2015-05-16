@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "mobius_java_a"
-PROJECT_SPACE_DIR = "/home/hefty/mobius_java/devel"
+PROJECT_SPACE_DIR = "/home/hefty/mobius-android-ros/mobius_java/devel"
 PROJECT_VERSION = "0.1.0"

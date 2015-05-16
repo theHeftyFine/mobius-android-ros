@@ -1,8 +1,8 @@
-prefix=/home/hefty/mobius_java/install
+prefix=/home/hefty/mobius-android-ros/mobius_java/install
 
 Name: mobius_java_a
 Description: Description of mobius_java_a
 Version: 0.1.0
 Cflags: 
-Libs: -L/home/hefty/mobius_java/install/lib 
+Libs: -L/home/hefty/mobius-android-ros/mobius_java/install/lib 
 Requires: 

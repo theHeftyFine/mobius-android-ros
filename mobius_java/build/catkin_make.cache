@@ -1,2 +1,2 @@
 mobius_java_a:mobius_java_b
--DCATKIN_DEVEL_PREFIX=/home/hefty/mobius_java/devel -DCMAKE_INSTALL_PREFIX=/home/hefty/mobius_java/install
+-DCATKIN_DEVEL_PREFIX=/home/hefty/mobius-android-ros/mobius_java/devel -DCMAKE_INSTALL_PREFIX=/home/hefty/mobius-android-ros/mobius_java/install
