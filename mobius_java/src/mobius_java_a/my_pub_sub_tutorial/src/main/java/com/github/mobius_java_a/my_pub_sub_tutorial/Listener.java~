@@ -39,7 +39,6 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class Listener extends AbstractNodeMain {
-  //HashMap containing sets of publishers and subscribers, keyed to the relevant topic.
   private HashMap<String,List<Set<String>>> topicPubSub;
 
   public HashMap<String,List<Set<String>>> getTopics(){
@@ -48,13 +47,12 @@ public class Listener extends AbstractNodeMain {
 
   @Override
   public GraphName getDefaultNodeName() {
-    return GraphName.of("rosjava/getTopic");
+    return GraphName.of("rosjava/listener");
   }
 
   @Override
   public void onStart(ConnectedNode connectedNode) {
     final Log log = connectedNode.getLog();
-    //Client for the master roscore
     final MasterClient masterClient = new MasterClient(connectedNode.getMasterUri());
 
 
@@ -72,16 +70,15 @@ public class Listener extends AbstractNodeMain {
 		protected void loop() throws InterruptedException {
 			systemState = masterClient.getSystemState(getDefaultNodeName());
 			topicSystemState = systemState.getResult().getTopics();
-			//bit of code actually building the topic lists
-			//TODO: skip if nothing changed?
+			List<String> topicArray = new ArrayList<String>();
 			topicPubSub = new HashMap<String,List<Set<String>>>();
 			for (TopicSystemState i : topicSystemState) {
+				topicArray.add(i.getTopicName());
 				List<Set<String>> temp = new ArrayList<Set<String>>();
 				temp.add(i.getPublishers());
 				temp.add(i.getSubscribers());
 				topicPubSub.put(i.getTopicName(),temp);
 			}
-			//pretty print the lists to the info log. Can/will comment out.
 			String out = "";
 			for (Map.Entry<String,List<Set<String>>> i : topicPubSub.entrySet()){
 				out = out + "Topic: " + i.getKey() + "\n";
