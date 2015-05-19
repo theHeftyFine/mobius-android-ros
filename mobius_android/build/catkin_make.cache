@@ -1,0 +1,2 @@
+android_core
+-DCATKIN_DEVEL_PREFIX=/home/student/Mobius_DLC/mobius-android-ros/mobius_android/devel -DCMAKE_INSTALL_PREFIX=/home/student/Mobius_DLC/mobius-android-ros/mobius_android/install

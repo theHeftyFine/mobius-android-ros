@@ -1,0 +1,8 @@
+prefix=/home/student/Mobius_DLC/mobius-android-ros/mobius_android/devel
+
+Name: android_extras
+Description: Description of android_extras
+Version: 0.1.4
+Cflags: 
+Libs: -L/home/student/Mobius_DLC/mobius-android-ros/mobius_android/devel/lib 
+Requires: 
