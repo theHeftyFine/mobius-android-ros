@@ -1,0 +1,10 @@
+/home/student/android_new/build/android_core/CMakeFiles/_catkin_empty_exported_target.dir
+/home/student/android_new/build/CMakeFiles/clean_test_results.dir
+/home/student/android_new/build/CMakeFiles/doxygen.dir
+/home/student/android_new/build/android_core/CMakeFiles/gradle-android_core.dir
+/home/student/android_new/build/android_core/CMakeFiles/gradle-clean.dir
+/home/student/android_new/build/android_core/CMakeFiles/gradle-clean-android_core.dir
+/home/student/android_new/build/gtest/CMakeFiles/gtest.dir
+/home/student/android_new/build/gtest/CMakeFiles/gtest_main.dir
+/home/student/android_new/build/CMakeFiles/run_tests.dir
+/home/student/android_new/build/CMakeFiles/tests.dir
